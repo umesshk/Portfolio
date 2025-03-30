@@ -30,7 +30,7 @@ const Project = [
 export default function Projects(){
     const [selected, setSelected] = useState("all"); 
     console.log(selected)
-    return <div className="w-full h-screen mt-10  py-10 ">
+    return <div className="w-full  mt-10  py-10 ">
     <div className="w-full container px-10  mx-auto flex  gap-10 relative  items-center">
         <h1 className="text-white text-[4vw]">Projects</h1>
         <div className="w-full bg-purple-400 h-1 rounded-full "></div>
@@ -40,7 +40,7 @@ export default function Projects(){
     </div>
     <div className="w-full flex justify-between container mx-auto px-10 mt-5 gap-8">
       {selected=="all" && Project.map((item,index)=>{
-        return   <div  className="w-[22vw] h-[20vw] p-2 border border-white rounded-xl">
+        return   <div  key={index} className="w-[22vw] h-[20vw] p-2 border border-white rounded-xl">
         <div className="w-full flex flex-col justify-between h-full bg-red-300 py-5 px-2">
             <h1 className="text-center text-white font-bold text-xl uppercase underline  underline-offset-7">{item.title}</h1>
             <div className="flex justify-center gap-7 text-4xl"><Link href={"#3"}><FaLink /></Link><Link href={"#2"}><FaGithub /></Link></div>
@@ -49,7 +49,7 @@ export default function Projects(){
     </div>
       })}
       {selected=="front-end" && Project.map((item,index)=>{
-        return   <div  className={`${index!=2 ? "block" : "hidden"}  w-[22vw] h-[20vw] p-2 border border-white rounded-xl`}>
+        return   <div key={index}  className={`${index!=2 ? "block" : "hidden"}  w-[22vw] h-[20vw] p-2 border border-white rounded-xl`}>
         <div className="w-full flex flex-col justify-between h-full bg-red-300 py-5 px-2">
             <h1 className="text-center text-white font-bold text-xl uppercase underline  underline-offset-7">{item.title}</h1>
             <div className="flex justify-center gap-7 text-4xl"><Link href={"#3"}><FaLink /></Link><Link href={"#2"}><FaGithub /></Link></div>
@@ -58,7 +58,7 @@ export default function Projects(){
     </div>
       })}
       {selected=="full-stack" && Project.map((item,index)=>{
-        return   <div  className={`w-[22vw] ${index==2 ? "block" : "hidden"} h-[20vw] p-2 border border-white rounded-xl`}>
+        return   <div key={index}  className={`w-[22vw] ${index==2 ? "block" : "hidden"} h-[20vw] p-2 border border-white rounded-xl`}>
         <div className="w-full flex flex-col justify-between h-full bg-red-300 py-5 px-2">
             <h1 className="text-center text-white font-bold text-xl uppercase underline  underline-offset-7">{item.title}</h1>
             <div className="flex justify-center gap-7 text-4xl"><Link href={"#3"}><FaLink /></Link><Link href={"#2"}><FaGithub /></Link></div>
