@@ -41,7 +41,7 @@ const frontendTechnologies = [
 
 export default function Skills(){
 
-    return  <div className="w-full mt-10 h-screen ">
+    return  <div className="w-full mt-10  ">
     <div className="w-full container px-10  mx-auto flex gap-10  items-center">
         <div className="w-full bg-purple-400 h-1 rounded-full "></div>
         <h1 className="text-white text-[4vw]">Skills</h1>

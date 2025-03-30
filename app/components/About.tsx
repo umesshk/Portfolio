@@ -1,7 +1,7 @@
 export default function About() {
     return <div className="w-full  py-10 ">
         <div className="w-full container px-10  mx-auto flex gap-10  items-center">
-            <h1 className="text-white text-[4vw]">About</h1>
+            <h1 className="text-white text-[4vw] w-[25vw]">About Me</h1>
             <div className="w-full bg-purple-400 h-1 rounded-full "></div>
         </div>
         <div className="w-full container mx-auto px-10 mt-5 ">
