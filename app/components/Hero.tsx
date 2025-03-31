@@ -38,9 +38,9 @@ export default function Hero() {
             <span className="text-purple-400 capitalize ml-1 font-medium">Web development</span>.
           </motion.p> 
           <div className="flex flex-col sm:flex-row w-full mt-8 md:mt-12 gap-4 sm:gap-8 md:gap-20 justify-center md:justify-start">
-            <motion.button variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
+            <motion.a href="mailto:umeshkumar153654@gmail.com"  variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
               Hire me
-            </motion.button >
+            </motion.a >
             <motion.button variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
               Resume
             </motion.button >
