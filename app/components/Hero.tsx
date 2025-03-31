@@ -1,23 +1,64 @@
+"use client"
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Hero(){
-    return <div className="w-full">
-        <div className=" w-full container mt-16  grid grid-cols-3  mx-auto h-[33vw] ">
-            <div className="  container px-10 py-8 col-span-2 -red-400">
-                <h1 className="text-white text-[4.5vw]">Hi, I'm </h1>
-                <h1 className="text-[5.4vw]  leading-10 tracking-tighter text-purple-500 font-medium " >Umesh Kumar</h1>
-                <p className="text-white mt-10 ml-2 text-lg ">A  <span className="text-purple-400 font-medium"> Full-Stack Developer </span>from India </p>
-                <p className="text-white  ml-2 mt-2 ">Bridging Technology and Creativity through <span className="text-purple-400 capitalize ml-1 font-medium">web development</span>.</p>
-                <div className="flex w-full mt-12 gap-20">
-                    <button className="text-white font-medium hover:text-purple-400  hover:cursor-pointer  px-8 py-2 border-2 border-purple-400 rounded-full">Hire me</button>
-                    <button className="text-white font-medium hover:text-purple-400  hover:cursor-pointer  px-8 py-2 border-2 border-purple-400 rounded-full">Resume</button>
-                </div>
-            </div>
-            <div className="container py-20">
-                <div className="w-[500px] -mt-18  bg-purple-400 h-[500px] relative rounded-full p-4 ">
-                    <Image className="rounded-full absolute right-3 bottom-2" src={'/profile.jpg'} width={550} height={550} alt="Profile"/>
-                </div>
-            </div>
+
+
+export const  slideUp = (delay: number) =>{
+    return {
+        initial : {
+            y : '100%',
+            opacity: 0,
+        },
+        animate: {
+            y: 0,
+            opacity : 1,
+            transition : {
+                duration : 0.8,
+                delay: delay,
+            },
+        },
+    };
+}
+export default function Hero() {
+  return (
+    <div className="w-full px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto mt-8 md:mt-16 flex flex-col  md:grid md:grid-cols-3 md:h-auto">
+        <div className="container px-4 py-6 md:px-10 md:py-8 col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
+          <motion.h1 variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white text-4xl sm:text-5xl md:text-[4.5vw]">Hi, I'm </motion.h1>
+          <motion.h1 variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-4xl sm:text-5xl md:text-[5.4vw] leading-tight md:leading-10 mt-4 -ml-2 tracking-tighter text-purple-500 font-medium">
+            Umesh Kumar
+          </motion.h1>
+          <motion.p variants={slideUp(0.2)} initial="initial" whileInView="animate"  className="text-white mt-6 md:mt-10 text-base md:text-lg">
+            A <span className="text-purple-400 font-medium">Full-Stack Developer</span> from India
+          </motion.p> 
+          <motion.p variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white mt-2">
+            Bridging Technology and Creativity through 
+            <span className="text-purple-400 capitalize ml-1 font-medium">Web development</span>.
+          </motion.p> 
+          <div className="flex flex-col sm:flex-row w-full mt-8 md:mt-12 gap-4 sm:gap-8 md:gap-20 justify-center md:justify-start">
+            <motion.button variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
+              Hire me
+            </motion.button >
+            <motion.button variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
+              Resume
+            </motion.button >
+          </div>
         </div>
+        
+        <div className="container py-8 md:py-20 flex justify-center md:justify-start mt-6 md:mt-0">
+          <motion.div variants={slideUp(0.2)} initial="initial" whileInView="animate" className="w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-purple-400 relative rounded-full p-2 md:p-4">
+            <Image 
+              className="rounded-full absolute inset-0 m-auto" 
+              src={'/profile.jpg'} 
+              layout="fill"
+              objectFit="cover"
+              alt="Profile"
+            />
+          </motion.div>
+        </div>
+      </div>
     </div>
+  );
 }
