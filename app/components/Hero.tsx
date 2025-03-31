@@ -26,8 +26,8 @@ export default function Hero() {
     <div className="w-full px-4 sm:px-6 md:px-8">
       <div className="container mx-auto mt-8 md:mt-16 flex flex-col  md:grid md:grid-cols-3 md:h-auto">
         <div className="container px-4 py-6 md:px-10 md:py-8 col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
-          <motion.h1 variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white text-4xl sm:text-5xl md:text-[4.5vw]">Hi, I'm </motion.h1>
-          <motion.h1 variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-4xl sm:text-5xl md:text-[5.4vw] leading-tight md:leading-10 mt-4 -ml-2 tracking-tighter text-purple-500 font-medium">
+        <motion.h1 variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white text-4xl sm:text-5xl md:text-[4.5vw]">Hi, I&apos;m</motion.h1>
+        <motion.h1 variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-4xl sm:text-5xl md:text-[5.4vw] leading-tight md:leading-10 mt-4 -ml-2 tracking-tighter text-purple-500 font-medium">
             Umesh Kumar
           </motion.h1>
           <motion.p variants={slideUp(0.2)} initial="initial" whileInView="animate"  className="text-white mt-6 md:mt-10 text-base md:text-lg">

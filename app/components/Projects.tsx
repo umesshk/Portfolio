@@ -1,9 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { title } from "process";
 import { useState } from "react"
 import { FaGithub, FaLink } from "react-icons/fa";
 import { slideUp } from "./Hero";

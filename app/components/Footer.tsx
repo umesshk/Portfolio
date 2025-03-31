@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const ProfileLinks = [
   {
@@ -27,14 +26,12 @@ export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if we're on mobile and handle scroll events
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
     
     const handleScroll = () => {
-      // Show the footer when near the bottom of the page on mobile
       if (isMobile) {
         const scrollPosition = window.scrollY + window.innerHeight;
         const threshold = document.body.scrollHeight - 100;
@@ -42,7 +39,6 @@ export default function Footer() {
       }
     };
     
-    // Initial checks
     checkMobile();
     window.addEventListener('resize', checkMobile);
     window.addEventListener('scroll', handleScroll);

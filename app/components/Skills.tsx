@@ -1,14 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaCss3, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
-import { IoLogoGithub, IoLogoJavascript } from "react-icons/io";
-import { IoLogoDocker } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiCplusplus, SiExpress, SiMongodb, SiPrisma, SiSocketdotio, SiTypescript } from "react-icons/si";
 import { slideUp } from "./Hero";
+import { IoLogoJavascript } from "react-icons/io";
 
 const skillCategories = [
   {
@@ -58,7 +56,7 @@ export default function Skills() {
             
             <div className="w-full container mx-auto mt-4 px-4 sm:px-6 md:px-10">
                 <motion.div variants={slideUp(0.2)}  initial="initial" whileInView="animate" className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
-                    {skillCategories.map((category,index) => (
+                    {skillCategories.map((category) => (
                         <div 
                             key={category.title}
                             className="bg-black/40 backdrop-blur-sm border border-purple-500/20 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 p-4 sm:p-5 md:p-6"

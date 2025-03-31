@@ -1,9 +1,8 @@
 "use client"
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react"
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
 
 const ProjectList = [
     {
@@ -100,7 +99,7 @@ export default function ProjectMobile(){
     )
 }
 
-function Project({title, link, img, desc, selected, index, git}:{title:string, link:string, img:string, selected:string, desc:string , index:number, git:string}) {
+function Project({title, link, img, desc}:{title:string, link:string, img:string, selected:string, desc:string , index:number, git:string}) {
     return (
         <Link 
             href={link} 
