@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero(){
     return <div className="w-full">
         <div className=" w-full container mt-16  grid grid-cols-3  mx-auto h-[35vw] ">
@@ -12,7 +14,8 @@ export default function Hero(){
                 </div>
             </div>
             <div className="container py-20">
-                <div className="w-full -mt-18  bg-purple-400 h-full rounded-full  ">
+                <div className="w-[500px] -mt-18  bg-purple-400 h-[500px] relative rounded-full p-4 ">
+                    <Image className="rounded-full absolute right-3 bottom-2" src={'/profile.jpg'} width={550} height={550} alt="Profile"/>
                 </div>
             </div>
         </div>
