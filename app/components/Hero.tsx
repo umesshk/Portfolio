@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero(){
     return <div className="w-full">
-        <div className=" w-full container mt-16  grid grid-cols-3  mx-auto h-[35vw] ">
+        <div className=" w-full container mt-16  grid grid-cols-3  mx-auto h-[33vw] ">
             <div className="  container px-10 py-8 col-span-2 -red-400">
                 <h1 className="text-white text-[4.5vw]">Hi, I'm </h1>
                 <h1 className="text-[5.4vw]  leading-10 tracking-tighter text-purple-500 font-medium " >Umesh Kumar</h1>
