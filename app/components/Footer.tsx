@@ -57,7 +57,7 @@ export default function Footer() {
           <Link 
             key={item.link} 
             target="_blank" 
-            style={{ left: `${25 + index * 10}%` }}  
+            style={{ left: `${32 + index * 10}%` }}  
             className="hover:text-white font-bold border border-purple-400 py-2 bg-[#04070f] hover:bg-purple-500 transition-all ease-in-out text-purple-200 hover:cursor-pointer px-5 rounded-3xl absolute -top-5" 
             href={item.link}
           >

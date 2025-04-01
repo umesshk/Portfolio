@@ -48,7 +48,7 @@ export default function Hero() {
         </div>
         
         <div className="container py-8 md:py-20 flex justify-center md:justify-start mt-6 md:mt-0">
-          <motion.div variants={slideUp(0.2)} initial="initial" whileInView="animate" className="w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-purple-400 relative rounded-full p-2 md:p-4">
+          <motion.div variants={slideUp(0.2)} initial="initial" whileInView="animate" className="w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]  relative rounded-full p-2 md:p-4">
             <Image 
               className="rounded-full absolute inset-0 m-auto" 
               src={'/profile.jpg'} 

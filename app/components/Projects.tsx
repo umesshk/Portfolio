@@ -6,6 +6,24 @@ import { useState } from "react"
 import { FaGithub, FaLink } from "react-icons/fa";
 import { slideUp } from "./Hero";
 
+export const slideRight = (delay:number) =>{
+    return {
+      initial: {
+        opacity: 0,
+    }, 
+    animate: {
+      opacity: 1, 
+      transition : {
+        duration : 0.8,
+        delay: delay,
+        ease: 'easeIn'
+    },
+    }
+  
+  }
+}
+
+
 const ProjectList = [
     {
         title: "Anisaas",
@@ -40,16 +58,16 @@ export default function Projects(){
     return <div className="w-full  mt-10  py-10 ">
     <div className="w-full container px-10  mx-auto flex  gap-10 relative  items-center">
         <motion.h1 variants={slideUp(0.2)} initial="initial" whileInView="animate"   className="text-white text-[4vw]">Projects</motion.h1>
-        <div className="w-full bg-purple-400 h-1 rounded-full "></div>
-        <button onClick={()=>setSelected("all")} className={`hover:text-white transition-all ease-in-out  ${selected == "all"? "bg-purple-500 text-white": "bg-[#04070f]"} font-medium border-1 border-purple-400 py-2 bg-[#060a14] hover:bg-purple-500 text-purple-200 hover:cursor-pointer absolute right-[35vw] px-5 lg:block hidden rounded-3xl `}>All</button>
-        <button onClick={()=>setSelected("front-end")} className={`hover:text-white font-medium border-1 border-purple-400 py-2 ${selected == "front-end"? "bg-purple-500 text-white": "bg-[#04070f]"} hover:bg-purple-500  transition-all ease-in-out text-purple-200  hover:cursor-pointer absolute right-[25vw] px-5 lg:block hidden rounded-3xl `}>Front End</button>
-        <button onClick={()=>setSelected('full-stack')} className={`hover:text-white transition-all ease-in-out  ${selected == "full-stack"? "bg-purple-500 text-white": "bg-[#04070f]"} font-medium border-1 border-purple-400 py-2 bg-[#060a14] hover:bg-purple-500 text-purple-200 hover:cursor-pointer absolute lg:block hidden right-[15vw] px-5 rounded-3xl `}>Full Stack</button>
+        <motion.div variants={slideUp(0.3)} initial="initial" whileInView="animate" className="w-full bg-purple-400 h-1 rounded-full "></motion.div>
+        <motion.button   variants={slideRight(0.3)} initial="initial" whileInView="animate"  onClick={()=>setSelected("all")} className={`hover:text-white transition-all ease-in-out  ${selected == "all"? "bg-purple-500 text-white": "bg-[#04070f]"} font-medium border-1 border-purple-400 py-2 bg-[#060a14] hover:bg-purple-500 text-purple-200 hover:cursor-pointer absolute right-[35vw] px-5 lg:block hidden rounded-3xl `}>All</motion.button>
+        <motion.button   variants={slideRight(0.3)} initial="initial" whileInView="animate"  onClick={()=>setSelected("front-end")} className={`hover:text-white font-medium border-1 border-purple-400 py-2 ${selected == "front-end"? "bg-purple-500 text-white": "bg-[#04070f]"} hover:bg-purple-500  transition-all ease-in-out text-purple-200  hover:cursor-pointer absolute right-[25vw] px-5 lg:block hidden rounded-3xl `}>Front End</motion.button>
+        <motion.button   variants={slideRight(0.3)} initial="initial" whileInView="animate"  onClick={()=>setSelected('full-stack')} className={`hover:text-white transition-all ease-in-out  ${selected == "full-stack"? "bg-purple-500 text-white": "bg-[#04070f]"} font-medium border-1 border-purple-400 py-2 bg-[#060a14] hover:bg-purple-500 text-purple-200 hover:cursor-pointer absolute lg:block hidden right-[15vw] px-5 rounded-3xl `}>Full Stack</motion.button>
 
     </div>
         <div className="flex justify-around w-full container mx-auto mt-8 md:flex-row flex-col  ">
         {ProjectList.map((item,index)=> <Project key={index} title= {item.title}  link={item.link} img={item.img} git={item.gitlink} index={index} desc={item.desc} selected={selected}/>)}
         </div>
-</div>
+    </div>
 }
 
 function Project({title, link, img,desc, selected, index,git}:{title:string, link:string,img:string,desc:string, selected:string,index:number,git:string}){
