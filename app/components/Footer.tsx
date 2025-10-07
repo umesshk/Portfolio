@@ -6,15 +6,15 @@ import Link from "next/link";
 const ProfileLinks = [
   {
     title: "GitHub",
-    link: "https://github.com/UmeshKumar0143"
+    link: "https://github.com/umesshk"
   },
   {
     title: "X",
-    link: "https://x.com/UmeshKumar00143"
+    link: "https://x.com/ume_sshk"
   },
   {
     title: "Linkedin",
-    link: "https://www.linkedin.com/in/umesh-kumar01/"
+    link: "https://www.linkedin.com/in/ume_sshk/"
   },
   {
     title: "Instagram",

@@ -40,7 +40,7 @@ export default function Hero() {
             <motion.a href="mailto:umeshkumar153654@gmail.com"  variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
               Hire me
             </motion.a >
-            <motion.a href="./UmeshResume.pdf" download variants={slideUp(0.2)} initial="initial" whileInView="animate" className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
+            <motion.a href="./Umesh'sResume.pdf" download variants={slideUp(0.2)} initial="initial" whileInView="animate"  className="text-white font-medium hover:text-purple-400 hover:cursor-pointer px-6 py-2 border-2 border-purple-400 rounded-full">
               Resume
             </motion.a >
           </div>
